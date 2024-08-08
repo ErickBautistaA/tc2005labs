@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(190, 188, 180);
+}
+
+* {
+    margin: 20px;
+}
+
+strong{
+    font-size: 18px;
+}
+
+strong:hover{
+    color:brown;
+}
+
+p:hover{
+    font-size: 18px;
+}
+
+#biblio{
+    color: rgb(154, 143, 143);
+}
+
+.red-text {
+    color:red;
+}
+
+h1{
+    color:blue;
+    font-style: italic;
+}
