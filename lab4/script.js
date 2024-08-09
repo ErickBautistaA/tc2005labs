@@ -184,5 +184,6 @@ function ejemploPersonalizado() {
     personas.forEach(persona => persona.mostrarInformacion());
 
     const datoMostrar = prompt("¿Qué dato desea mostrar? (nombre, edad, oficio)");
+    document.write(`${persona.datoMostrar}`);
     personas.forEach(persona => persona.mostrarDato(datoMostrar));
 }
