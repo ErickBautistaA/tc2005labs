@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Muchos gatos</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    </head>
+    <body>
+        <section class="section">
+
+        <h1 class="title has-text-warning"> gatos y muchos gatos</h1>
+        <nav>
+            <ul> 
+                <li>gato naranja</li>
+                <li>gato negro</li>
+
+            </ul>
+        </nav>
+
+        <p>aqui hablaremos de gatos y solo <strong class="has-text-danger">gatos</strong></p>
+        <h2 class="title is-5 has-text-primary mt-3 mb-2">Presentacion</h2>
+        <p>Soy Erick Eduardo Bautista Acosta </p>
+        <p>matricula: A01707267</p>
+        <p>correo: A01707267@tec.mx</p>
+
+        <h2 class="title is-5 has-text-primary mt-3 mb-2">preguntas</h2>
+
+        <strong class="has-text-danger">¿Por qué es una buena práctica usar JavaScript para checar que sean
+           válidos los inputs de las formas antes de enviar los datos al servidor?</strong>
+        <p> Mejora la experiencia del usuario, reduce la carga en el servidor, ahorra ancho de vanda y previene la perdida de datos.
+        </p>
+        
+        <strong class="has-text-danger">¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?
+        </strong>
+        <p>Hay varias formas unas cuantas serian las siguientes: desactiva js en el navegador, manipula el codigo js en el navegador, manipula el html directamenta, etc.</p>
+
+        <strong class="has-text-danger">Si te puedes saltar la seguridad de las validaciones de JavaScript,
+           entonces ¿por qué la primera pregunta dice que es una buena práctica?</strong>
+        <p>Las validaciones en el lado del cliente proporcionan una experiencia de usuario más rápida y fluida. Si un usuario comete un error
+           al llenar un formulario, es mucho más eficiente mostrar un mensaje de error instantáneamente en lugar de esperar a que los datos
+            se envíen al servidor y se procese una respuesta. <br>
+            Reducción de la Carga en el Servidor. <br>
+            Rapidez de Desarrollo y Depuración. <br>
+            Las validaciones en JavaScript son una buena práctica porque mejoran la experiencia del usuario y la eficiencia, pero deben
+             complementarse con validaciones en el servidor para garantizar una seguridad robusta.
+
+          </p>
+
+
+            <div class="box mt-6">
+                <article class="media">
+                  <div class="media-left">
+                    <figure class="image is-64x64">
+                      <img src="https://th.bing.com/th/id/OIP.DBPUn_ICu8vXkJitnHrefAHaHX?rs=1&pid=ImgDetMain" alt="Image" />
+                    </figure>
+                  </div>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <strong>MRCat</strong> <small>@mrcat</small>
+                        <small>31m</small>
+                        <br />
+                        Pero que pagina mas buena... No tiene nada 10/10. Yo la uso para dormir... mew
+                      </p>
+                    </div>
+                    <nav class="level is-mobile">
+                      <div class="level-left">
+                        <a class="level-item" aria-label="reply">
+                          <span class="icon is-small">
+                            <i class="fas fa-reply" aria-hidden="true"></i>
+                          </span>
+                        </a>
+                        <a class="level-item" aria-label="retweet">
+                          <span class="icon is-small">
+                            <i class="fas fa-retweet" aria-hidden="true"></i>
+                          </span>
+                        </a>
+                        <a class="level-item" aria-label="like">
+                          <span class="icon is-small">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                          </span>
+                        </a>
+                      </div>
+                    </nav>
+                  </div>
+                </article>
+                </div>
+
+    
+            </div>
+        <!-- <script src="script.js"></script> -->
+
+            <h2 class="title is-5"> prueba nuestros botones</h2>
+        <!-- botones para los js-->
+
+          <button class="button is-link m-3" id="boton_gato">Mira un gato</button>
+          <button style="display:none" class="button is-success m-3" id="boton_gatoN">gato negro</button>
+          <button style="display:none" class="button is-danger m-3" id="boton_gatoA">gato amarillo</button>
+          <br>
+
+
+          <img width="40%" id="imagen_gato" src="" alt=""/>
+
+          <br><br>
+          <button class="button is-link m-3" id="boton_azul">Crea Persona</button>
+
+        <h1 class="title is-5 mt-6">inscribete</h1>
+        
+        <!--botones para mandar informacion-->
+          
+          <div class="field">
+            <label class="label">Subject</label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>Select dropdown</option>
+                  <option>With options</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          
+          <div class="field">
+            <label class="label">Message</label>
+            <div class="control">
+              <textarea class="textarea" placeholder="Textarea"></textarea>
+            </div>
+          </div>
+          
+          <div class="field">
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox">
+                I agree to the <a href="#">terms and conditions</a>
+              </label>
+            </div>
+          </div>
+          
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="question">
+                Yes
+              </label>
+              <label class="radio">
+                <input type="radio" name="question">
+                No
+              </label>
+            </div>
+          </div>
+          
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link">Submit</button>
+            </div>
+            <div class="control">
+              <button class="button is-link is-light">Cancel</button>
+            </div>
+          </div>
+
+    </section>
+    <script src="JS/script.js"></script>
+    </body>
+</html>
