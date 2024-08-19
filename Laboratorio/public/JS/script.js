@@ -6,7 +6,6 @@ const botton_azul = document.getElementById('boton_azul');
 
 
 boton_gato.onclick = () => {
-    console.log("click");
     const imagen =document.getElementById("imagen_gato");
     imagen.alt= "imagen_gato";
     imagen.src = "https://i.pinimg.com/originals/a2/9e/99/a29e9961ef1b2de9e99778f6ef1a54a1.jpg";
