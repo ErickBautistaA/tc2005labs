@@ -1,5 +1,5 @@
 const boton = document.getElementById('boton_regreso');
 
 boton.onclick = () =>{
-    window.location.href = "principal.html";
+    window.location.href = "/principal";
 }

@@ -8,7 +8,7 @@ function validatePassword() {
         document.getElementById("message").classList.add("is-success");
 
         setTimeout(function() {
-            window.location.href = "principal.html"; // Redireccion a pagina deseada
+            window.location.href = "/principal"; // Redireccion a pagina deseada
         }, 2000);
     } else {
         document.getElementById("message").innerText = "Passwords do not match!";
