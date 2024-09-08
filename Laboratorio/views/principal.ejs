@@ -5,7 +5,7 @@
     </head>
     <body>
         <section class="section">
-            <h1 class="title has-text-warning"> gatos y muchos gatos</h1>
+            <h1 class="title has-text-warning"> Gatos y muchos gatos</h1>
             <nav>
                 <ul>
                     <li>gato naranja</li>
@@ -13,74 +13,60 @@
                 </ul>
             </nav>
 
-            <p>aqui hablaremos de gatos y solo <strong class="has-text-danger">gatos</strong></p>
+            <p>Aquí hablaremos de gatos y solo <strong class="has-text-danger">gatos</strong></p>
 
-            <h2 class="title is-5 has-text-primary mt-3 mb-2">Presentacion</h2>
+            <h2 class="title is-5 has-text-primary mt-3 mb-2">Presentación</h2>
             <p>Soy Erick Eduardo Bautista Acosta</p>
-            <p>matricula: A01707267</p>
-            <p>correo: A01707267@tec.mx</p>
+            <p>Matrícula: A01707267</p>
+            <p>Correo: A01707267@tec.mx</p>
 
-            <h2 class="title is-5 has-text-primary mt-3 mb-2">preguntas</h2>
-
-            <strong class="has-text-danger">¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?</strong>
-            <p>Mejora la experiencia del usuario, reduce la carga en el servidor, ahorra ancho de banda y previene la pérdida de datos.</p>
-
-            <strong class="has-text-danger">¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</strong>
-            <p>Hay varias formas, como desactivar JS en el navegador, manipular el código JS en el navegador, manipular el HTML directamente, etc.</p>
-
-            <strong class="has-text-danger">Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</strong>
-            <p>Las validaciones en el lado del cliente proporcionan una experiencia de usuario más rápida y fluida. Si un usuario comete un error al llenar un formulario, es mucho más eficiente mostrar un mensaje de error instantáneamente en lugar de esperar a que los datos se envíen al servidor y se procese una respuesta. Reducción de la Carga en el Servidor. Rapidez de Desarrollo y Depuración. Las validaciones en JavaScript son una buena práctica porque mejoran la experiencia del usuario y la eficiencia, pero deben complementarse con validaciones en el servidor para garantizar una seguridad robusta.</p>
-
-            <div class="box mt-6">
-                <article class="media">
-                    <div class="media-left">
-                        <figure class="image is-64x64">
-                            <img src="https://th.bing.com/th/id/OIP.DBPUn_ICu8vXkJitnHrefAHaHX?rs=1&pid=ImgDetMain" alt="Image" />
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>MRCat</strong> <small>@mrcat</small> <small>31m</small>
-                                <br />
-                                Pero que pagina mas buena... No tiene nada 10/10. Yo la uso para dormir... mew
-                            </p>
-                        </div>
-                        <nav class="level is-mobile">
-                            <div class="level-left">
-                                <a class="level-item" aria-label="reply">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-reply" aria-hidden="true"></i>
-                                    </span>
-                                </a>
-                                <a class="level-item" aria-label="retweet">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-retweet" aria-hidden="true"></i>
-                                    </span>
-                                </a>
-                                <a class="level-item" aria-label="like">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-heart" aria-hidden="true"></i>
-                                    </span>
-                                </a>
-                            </div>
-                        </nav>
-                    </div>
-                </article>
-            </div>
-
-            <h2 class="title is-5">prueba nuestros botones</h2>
+            <!-- Sección de botones para mostrar imágenes -->
+            <h2 class="title is-5">Prueba nuestros botones</h2>
             <button class="button is-link m-3" id="boton_gato">Mira un gato</button>
-            <button style="display:none" class="button is-success m-3" id="boton_gatoN">gato negro</button>
-            <button style="display:none" class="button is-danger m-3" id="boton_gatoA">gato amarillo</button>
+            <button style="display:none" class="button is-success m-3" id="boton_gatoN">Gato negro</button>
+            <button style="display:none" class="button is-danger m-3" id="boton_gatoA">Gato amarillo</button>
             <br>
             <img width="40%" id="imagen_gato" src="" alt="" />
 
-
+            <!-- Formulario para nombrar gatos -->
             <br><br>
-            <button class="button is-link m-3" id="boton_azul">Crea Persona</button>
+            <div class="container"></div>
+            <button class="button is-link m-3" id="boton_azul">Nombra un gato</button>
 
-            <h1 class="title is-5 mt-6">inscribete</h1>
+            <div class="box" id="formulario_gato" style="display:none;">
+                <h3 class="title is-5">Ingrese los datos del gato</h3>
+                <input type="text" id="nombre_gato" class="input is-link mb-3" placeholder="Nombre del gato">
+                
+                <div class="field">
+                    <label class="label">Seleccione una imagen de gato:</label>
+                    <div class="control">
+                        <label class="radio">
+                            <input type="radio" name="gato" value="https://wallpapercave.com/wp/wp7313876.jpg">
+                            <img src="https://wallpapercave.com/wp/wp7313876.jpg" alt="Naranja" width="100">
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="gato" value="https://i.pinimg.com/originals/38/a0/3c/38a03c8aec4b954a0780bbd5f2e789f5.jpg">
+                            <img src="https://i.pinimg.com/originals/38/a0/3c/38a03c8aec4b954a0780bbd5f2e789f5.jpg" alt="Blanco" width="100">
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="gato" value="https://th.bing.com/th/id/OIP.vPTcdImh65gL-8tvYmV1wAAAAA?rs=1&pid=ImgDetMain">
+                            <img src="https://th.bing.com/th/id/OIP.vPTcdImh65gL-8tvYmV1wAAAAA?rs=1&pid=ImgDetMain" alt="Negro" width="100">
+                        </label>
+                    </div>
+                </div>
+                
+                <button class="button is-success mt-3" id="guardar_gato">Guardar Gato</button>
+            </div>
+            
+            <br><br>
+            <h2 class="title is-4 has-text-warning">Gatos con nombre</h2>
+            <div class="box" id="tarjetas_gatos">
+                <!-- Aquí se mostrarán las tarjetas de los gatos -->
+            </div>
+            <div id="tarjetas_gatos"></div>
+
+            <!-- Sección de inscribirse -->
+            <h1 class="title is-5 mt-6">Inscríbete</h1>
 
             <div class="field">
                 <label class="label">Subject</label>
@@ -135,6 +121,6 @@
 
         <%- include('includes/footer') %> <!-- Partial para el footer -->
 
-        <script src="JS/script.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>

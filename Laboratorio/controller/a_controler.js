@@ -1,4 +1,11 @@
 // controllers/a_controller.js
+exports.getIndex = (req, res, next) => {
+    res.render('Index', {
+        title: 'Inicio de sesion',
+        message: 'Bienvenido'
+    });
+};
+
 exports.getPrincipal = (req, res, next) => {
     res.render('principal', {
         title: 'Página Principal',
