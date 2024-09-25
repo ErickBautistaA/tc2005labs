@@ -4,6 +4,7 @@
         <%- include('includes/head') %> <!-- Partial para el head -->
     </head>
     <body>
+        <%- include('includes/navbar') %>
         <section class="section">
             <h1 class="title has-text-warning"> Gatos y muchos gatos</h1>
             <nav>
@@ -20,43 +21,55 @@
             <p>Matrícula: A01707267</p>
             <p>Correo: A01707267@tec.mx</p>
 
-            <!-- Sección de botones para mostrar imágenes -->
-            <h2 class="title is-5">Prueba nuestros botones</h2>
-            <button class="button is-link m-3" id="boton_gato">Mira un gato</button>
-            <button style="display:none" class="button is-success m-3" id="boton_gatoN">Gato negro</button>
-            <button style="display:none" class="button is-danger m-3" id="boton_gatoA">Gato amarillo</button>
-            <br>
-            <img width="40%" id="imagen_gato" src="" alt="" />
-
             <!-- Formulario para nombrar gatos -->
             <br><br>
             <div class="container"></div>
-            <button class="button is-link m-3" id="boton_azul">Nombra un gato</button>
+                <button class="button is-link m-3" id="boton_azul">Nombra un gato </button>
 
-            <div class="box" id="formulario_gato" style="display:none;">
-                <h3 class="title is-5">Ingrese los datos del gato</h3>
-                <input type="text" id="nombre_gato" class="input is-link mb-3" placeholder="Nombre del gato">
-                
-                <div class="field">
-                    <label class="label">Seleccione una imagen de gato:</label>
-                    <div class="control">
-                        <label class="radio">
-                            <input type="radio" name="gato" value="https://wallpapercave.com/wp/wp7313876.jpg">
-                            <img src="https://wallpapercave.com/wp/wp7313876.jpg" alt="Naranja" width="100">
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="gato" value="https://i.pinimg.com/originals/38/a0/3c/38a03c8aec4b954a0780bbd5f2e789f5.jpg">
-                            <img src="https://i.pinimg.com/originals/38/a0/3c/38a03c8aec4b954a0780bbd5f2e789f5.jpg" alt="Blanco" width="100">
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="gato" value="https://th.bing.com/th/id/OIP.vPTcdImh65gL-8tvYmV1wAAAAA?rs=1&pid=ImgDetMain">
-                            <img src="https://th.bing.com/th/id/OIP.vPTcdImh65gL-8tvYmV1wAAAAA?rs=1&pid=ImgDetMain" alt="Negro" width="100">
-                        </label>
+                <div class="box" id="formulario_gato_box" style="display:none;">
+                    <form id="formulario_gato_form" action="/mascotas/principal" method="POST">
+
+                    <h3 class="title is-5">Ingrese los datos del gato</h3>
+                    <input type="text" id="nombre_gato" class="input is-link mb-3" name="nombre" placeholder="Nombre del gato" required>
+
+                    <!-- Menú desplegable para seleccionar al dueño -->
+                    <div class="field">
+                        <label class="label">Seleccione al dueño del gato:</label>
+                        <div class="control">
+                            <div class="select">
+                                <select name="idDueno" required>
+                                    <option value="" disabled selected>Seleccione un dueño</option>
+                                    <% Usuario.forEach((usuarios) => { %>
+                                        <option value="<%= usuarios.id %>"><%= usuarios.nombre %></option>
+                                    <% }); %>
+                                </select>                                
+                            </div>
+                        </div>
                     </div>
-                </div>
-                
-                <button class="button is-success mt-3" id="guardar_gato">Guardar Gato</button>
+
+                    <div class="field">
+                        <label class="label">Seleccione una imagen de gato:</label>
+                        <div class="control">
+                            <label class="radio">
+                                <input type="radio" name="color" value="https://wallpapercave.com/wp/wp7313876.jpg" required>
+                                <img src="https://wallpapercave.com/wp/wp7313876.jpg" alt="Naranja" width="100">
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="color" value="https://i.pinimg.com/originals/38/a0/3c/38a03c8aec4b954a0780bbd5f2e789f5.jpg">
+                                <img src="https://i.pinimg.com/originals/38/a0/3c/38a03c8aec4b954a0780bbd5f2e789f5.jpg" alt="Blanco" width="100">
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="color" value="https://th.bing.com/th/id/OIP.vPTcdImh65gL-8tvYmV1wAAAAA?rs=1&pid=ImgDetMain">
+                                <img src="https://th.bing.com/th/id/OIP.vPTcdImh65gL-8tvYmV1wAAAAA?rs=1&pid=ImgDetMain" alt="Negro" width="100">
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="button is-success mt-3" id="guardar_gato" role="none">Guardar Gato</button>
+                </form>
             </div>
+
+
             
             <br><br>
             <h2 class="title is-4 has-text-warning">Gatos con nombre</h2>
@@ -119,8 +132,8 @@
             </div>
         </section>
 
+         <%- include('includes/script') %> 
         <%- include('includes/footer') %> <!-- Partial para el footer -->
 
-        <script src="js/script.js"></script>
     </body>
 </html>

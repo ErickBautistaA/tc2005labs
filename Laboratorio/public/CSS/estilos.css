@@ -1,0 +1,32 @@
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #041e3f;
+}
+
+.login-container h1 {
+    color: #041e3f;
+}
+
+.login-container label {
+    color: #041e3f;
+}
+
+
+.box {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+}
+
+.login-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.login-image img {
+    max-width: 100px; 
+}

@@ -4,21 +4,30 @@ const bodyParser = require('body-parser');
 
 // Inicializar la aplicación de Express
 const app = express();
-const PORT = 3000; // O el puerto que estés usando
+const PORT = 3001; 
+
+// Middleware para procesar formularios
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // Middleware para servir archivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.urlencoded({ extended: false }));
+
 
 // Configuración del motor de vistas EJS
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-// Importar las rutas modularizadas
-const rutas = require('./rutas/ruta');
 
-// Usar las rutas importadas
-app.use(rutas);
+// Importar las rutas modularizadas
+const rutasUser = require('./rutas/ruta');
+
+const rutaMascota = require('./rutas/mascotas');
+// Usar las rutas importadas con prefijo /users para las rutas de login y registro
+app.use('/users', rutasUser);
+
+app.use('/mascotas', rutaMascota);
+
+
 
 // Ruta para manejar 404
 app.use((req, res) => {

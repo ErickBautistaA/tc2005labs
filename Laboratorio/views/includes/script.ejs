@@ -1,0 +1,16 @@
+<script>
+// Seleccionar el botón y el formulario por sus IDs
+const botonAzul = document.getElementById('boton_azul');
+const formularioGatoBox = document.getElementById('formulario_gato_box');
+
+// Agregar el evento onclick al botón
+botonAzul.onclick = () => {
+    // Si el formulario está oculto (display: none), cambiar a block (visible)
+    if (formularioGatoBox.style.display === 'none') {
+        formularioGatoBox.style.display = 'block';
+    } else {
+        // Si ya es visible, volver a ocultarlo
+        formularioGatoBox.style.display = 'none';
+    }
+};
+</script>
