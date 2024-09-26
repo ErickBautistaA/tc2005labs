@@ -21,9 +21,9 @@ exports.gato = class {
         try {
             await connection.beginTransaction();
 
-            // Consulta SQL corregida
+            // Consulta SQL corregida mi tabla se llama gato no gatos..
             const [result] = await connection.execute(
-                'INSERT INTO gatos (nombre, color, idDueno) VALUES (?, ?, ?)', 
+                'INSERT INTO gato (nombre, color, idDueno) VALUES (?, ?, ?)', 
                 [nombre, color, id]
             );
 

@@ -27,49 +27,51 @@
                 <button class="button is-link m-3" id="boton_azul">Nombra un gato </button>
 
                 <div class="box" id="formulario_gato_box" style="display:none;">
-                    <form id="formulario_gato_form" action="/mascotas/principal" method="POST">
-
+                    <!-- gracias a esto puedo mandar los datos. el action -->
+                    <form id="formulario_gato_form" action="/mascotas/principal/ngato" method="POST">
+                    <div class="field">
                     <h3 class="title is-5">Ingrese los datos del gato</h3>
-                    <input type="text" id="nombre_gato" class="input is-link mb-3" name="nombre" placeholder="Nombre del gato" required>
+                    <div>
+                    <!-- nombre del gato -->
+                    <input type="nombre" id="nombre" class="input" name="nombre" placeholder="Nombre del gato" required>
+                    </div>
+                    </div>
 
                     <!-- Menú desplegable para seleccionar al dueño -->
                     <div class="field">
                         <label class="label">Seleccione al dueño del gato:</label>
-                        <div class="control">
                             <div class="select">
                                 <select name="idDueno" required>
-                                    <option value="" disabled selected>Seleccione un dueño</option>
                                     <% Usuario.forEach((usuarios) => { %>
                                         <option value="<%= usuarios.id %>"><%= usuarios.nombre %></option>
                                     <% }); %>
                                 </select>                                
                             </div>
-                        </div>
                     </div>
 
                     <div class="field">
                         <label class="label">Seleccione una imagen de gato:</label>
                         <div class="control">
                             <label class="radio">
-                                <input type="radio" name="color" value="https://wallpapercave.com/wp/wp7313876.jpg" required>
+                                <input type="radio" name="color" value="naranja" id="1">
                                 <img src="https://wallpapercave.com/wp/wp7313876.jpg" alt="Naranja" width="100">
                             </label>
                             <label class="radio">
-                                <input type="radio" name="color" value="https://i.pinimg.com/originals/38/a0/3c/38a03c8aec4b954a0780bbd5f2e789f5.jpg">
+                                <input type="radio" name="color" value="blanco" id="2">
                                 <img src="https://i.pinimg.com/originals/38/a0/3c/38a03c8aec4b954a0780bbd5f2e789f5.jpg" alt="Blanco" width="100">
                             </label>
                             <label class="radio">
-                                <input type="radio" name="color" value="https://th.bing.com/th/id/OIP.vPTcdImh65gL-8tvYmV1wAAAAA?rs=1&pid=ImgDetMain">
+                                <input type="radio" name="color" value="negro" id="3">
                                 <img src="https://th.bing.com/th/id/OIP.vPTcdImh65gL-8tvYmV1wAAAAA?rs=1&pid=ImgDetMain" alt="Negro" width="100">
                             </label>
                         </div>
                     </div>
-
-                    <button class="button is-success mt-3" id="guardar_gato" role="none">Guardar Gato</button>
+                          <!-- type submit para subir datos, value entrar. esto sirve para enviar los datos -->
+                    <button type="submit" class="button is-success mt-3" id="guardar_gato"  value ="Entrar">Guardar Gato</button>
                 </form>
             </div>
 
-
+                  <!-- aqui termina formulario crear gatos -->
             
             <br><br>
             <h2 class="title is-4 has-text-warning">Gatos con nombre</h2>
